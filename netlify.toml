@@ -5,11 +5,6 @@
 # - Cache headers for assets
 # =========================
 
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
 # -------------------------
 # Security headers
 # -------------------------
