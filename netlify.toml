@@ -1,9 +1,45 @@
 # =========================
 # netlify.toml
-# - Redirects (required)
+# - Safe redirects for a multi-page static site
 # - Security headers (CSP + basics)
 # - Cache headers for assets
 # =========================
+
+# -------------------------
+# Redirects (SAFE)
+# Do NOT use a catch-all redirect to /index.html for this project.
+# That pattern is for Single Page Apps and can break CSS/JS asset loading.
+# -------------------------
+
+[[redirects]]
+  from = "/learn"
+  to = "/pages/learn.html"
+  status = 301
+
+[[redirects]]
+  from = "/get-help"
+  to = "/pages/get-help.html"
+  status = 301
+
+[[redirects]]
+  from = "/playground"
+  to = "/pages/playground.html"
+  status = 301
+
+[[redirects]]
+  from = "/professionals"
+  to = "/pages/professionals.html"
+  status = 301
+
+[[redirects]]
+  from = "/about"
+  to = "/pages/about.html"
+  status = 301
+
+[[redirects]]
+  from = "/heard"
+  to = "/pages/heard.html"
+  status = 301
 
 # -------------------------
 # Security headers
@@ -17,13 +53,15 @@
     Permissions-Policy = "geolocation=(), microphone=(), camera=()"
     Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
 
-    # CSP note:
-    # - We allow Google Fonts (fonts.googleapis.com + fonts.gstatic.com)
-    # - We do NOT allow inline scripts generally, but some pages have tiny inline scripts.
-    #   To keep this simple and working, we allow 'unsafe-inline' for scripts.
-    #   Later, you can move inline scripts to external JS and remove unsafe-inline.
-    Content-Security-Policy = "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline'; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com;"
+    # CSP:
+    # - Allows Google Fonts
+    # - Allows Netlify Functions calls (same origin)
+    # - Keeps things tight while still working for this project
+    Content-Security-Policy = "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'none'; img-src 'self' data:; font-src 'self' https://fonts.gstatic.com data:; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; script-src 'self' 'unsafe-inline'; connect-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; manifest-src 'self';"
+
+# -------------------------
 # Cache static assets aggressively
+# -------------------------
 [[headers]]
   for = "/assets/*"
   [headers.values]
