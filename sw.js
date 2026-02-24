@@ -53,12 +53,15 @@
    
    // Fetch strategy
    self.addEventListener("fetch", (event) => {
-     const req = event.request;
-   
-     // Privacy: never cache non-GET
-     if (req.method !== "GET") return;
-   
-     const url = new URL(req.url);
+    const req = event.request;
+  
+    // Privacy: never cache non-GET
+    if (req.method !== "GET") return;
+  
+    // Ignore browser extensions and non-http(s) schemes
+    if (!req.url.startsWith("http://") && !req.url.startsWith("https://")) return;
+  
+    const url = new URL(req.url);
    
      // Avoid caching serverless function responses (AI, moderation)
      if (url.pathname.startsWith("/.netlify/functions/")) return;
