@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A calm, safe, mission-driven website for child abuse awareness, learning, and getting help. Built for children, survivors, parents, educators, and professionals." />
+    <meta name="theme-color" content="#1B3A4B" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Safeguard — Child Abuse Awareness & Support" />
+    <meta property="og:description" content="Learn warning signs, get help, and practice safe decisions with a guided Knowledge Playground. Always crisis-forward." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/images/og-cover.png" />
+    <meta property="og:url" content="/" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Safeguard — Child Abuse Awareness & Support" />
+    <meta name="twitter:description" content="Learn, get help, and practice safe decisions. Built for vulnerable users with deep empathy." />
+    <meta name="twitter:image" content="assets/images/og-cover.png" />
+
+    <link rel="icon" href="assets/icons/favicon.svg" />
+    <link rel="manifest" href="manifest.webmanifest" />
+
+    <!-- Fonts (performance: font-display swap is set in CSS via @font-face fallback strategy) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Body: DM Sans / Inter. Display: Fraunces / Lora -->
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/components.css" />
+
+    <title>Safeguard — Child Abuse Awareness & Support</title>
+
+    <!-- Schema.org Organization -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "NGO",
+        "name": "Safeguard",
+        "description": "A mission-driven awareness and support platform focused on child safety, education, and resource access.",
+        "url": "/",
+        "sameAs": [],
+        "foundingLocation": "United States",
+        "contactPoint": [{
+          "@type": "ContactPoint",
+          "contactType": "support",
+          "availableLanguage": ["English", "Spanish"],
+          "url": "/pages/get-help.html"
+        }]
+      }
+    </script>
+  </head>
+
+  <body>
+    <!-- Skip link -->
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Top crisis ribbon: always visible -->
+    <div class="crisis-ribbon" role="region" aria-label="Crisis resources">
+      <div class="crisis-ribbon__inner">
+        <p class="crisis-ribbon__text" data-i18n="crisisRibbon">
+          If you or a child is in immediate danger, call your local emergency number now.
+        </p>
+        <div class="crisis-ribbon__actions">
+          <a class="btn btn--small btn--coral" href="pages/get-help.html#crisis" data-i18n="crisisButton">
+            Crisis resources
+          </a>
+          <button class="btn btn--small btn--ghost" id="quickExitBtn" type="button" aria-label="Quick exit (opens weather)">
+            Quick Exit
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header" role="banner">
+      <div class="site-header__inner">
+        <a class="brand" href="index.html" aria-label="Safeguard home">
+          <span class="brand__mark" aria-hidden="true">◎</span>
+          <span class="brand__text">Safeguard</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary">
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu">
+            <span class="sr-only">Open menu</span>
+            <span aria-hidden="true">☰</span>
+          </button>
+
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="pages/learn.html" data-i18n="navLearn">Learn</a></li>
+            <li><a href="pages/get-help.html" data-i18n="navGetHelp">Get Help</a></li>
+            <li><a href="pages/playground.html" data-i18n="navPlayground">Playground</a></li>
+            <li><a href="pages/professionals.html" data-i18n="navPros">For Professionals</a></li>
+            <li><a href="pages/about.html" data-i18n="navAbout">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="site-header__tools">
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button class="btn btn--small btn--ghost" type="button" data-lang="en" aria-pressed="true">EN</button>
+            <button class="btn btn--small btn--ghost" type="button" data-lang="es" aria-pressed="false">ES</button>
+          </div>
+          <a class="btn btn--small btn--coral" href="pages/get-help.html#crisis" data-i18n="headerCrisis">
+            Get crisis help
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main id="main" class="container" role="main">
+      <section class="hero" aria-labelledby="heroTitle">
+        <div class="hero__content">
+          <p class="eyebrow" data-i18n="homeEyebrow">A calm place to learn, get support, and take the next safe step.</p>
+          <h1 class="display" id="heroTitle" data-i18n="homeTitle">
+            You deserve safety. You deserve to be heard.
+          </h1>
+          <p class="lead" data-i18n="homeLead">
+            This site is built for children, survivors, parents, educators, and professionals. If something feels wrong, you’re not overreacting. Let’s find a safe next step.
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" href="pages/get-help.html" data-i18n="homeCtaHelp">Help me find support</a>
+            <a class="btn btn--secondary" href="pages/playground.html" data-i18n="homeCtaPlayground">Practice what to do</a>
+          </div>
+
+          <div class="hero__note" role="note">
+            <p class="small" data-i18n="homeNote">
+              Your privacy matters. We do not store personal identities. You can Quick Exit anytime.
+            </p>
+          </div>
+        </div>
+
+        <div class="hero__panel" aria-label="Quick pathways">
+          <h2 class="h3" data-i18n="homePathTitle">Choose what fits you right now</h2>
+
+          <!-- 3 choices at a time: we keep this to 3 primary pathways -->
+          <div class="path-grid">
+            <a class="path-card" href="pages/get-help.html#for-children">
+              <h3 class="h4" data-i18n="pathChildTitle">I’m a child</h3>
+              <p class="small" data-i18n="pathChildDesc">I need help or I’m worried about someone.</p>
+            </a>
+
+            <a class="path-card" href="pages/get-help.html#for-survivors">
+              <h3 class="h4" data-i18n="pathSurvivorTitle">I’m a survivor</h3>
+              <p class="small" data-i18n="pathSurvivorDesc">I want support options and safe resources.</p>
+            </a>
+
+            <a class="path-card" href="pages/professionals.html">
+              <h3 class="h4" data-i18n="pathProTitle">I’m an educator or professional</h3>
+              <p class="small" data-i18n="pathProDesc">I need mandated reporter guidance and tools.</p>
+            </a>
+          </div>
+
+          <div class="soft-divider" aria-hidden="true"></div>
+
+          <div class="ai-teaser">
+            <p class="small">
+              <strong data-i18n="aiTeaserTitle">SafeGuide AI Companion</strong>
+              <span data-i18n="aiTeaserDesc">can help you navigate content. It is not counseling and always prioritizes human help in crises.</span>
+            </p>
+            <a class="btn btn--small btn--ghost" href="pages/get-help.html#safeguide" data-i18n="aiTeaserCta">Open SafeGuide</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="grid-2" aria-labelledby="homeLearnTitle">
+        <div class="card">
+          <h2 class="h2" id="homeLearnTitle" data-i18n="homeLearnTitle">Learn the signs, without fear-based messaging</h2>
+          <p data-i18n="homeLearnBody">
+            Clear, gentle education on types of abuse, warning signs, and how to talk to children. Written to protect vulnerable readers.
+          </p>
+          <ul class="bullets">
+            <li data-i18n="homeLearnBullet1">Types of abuse explained in safe language</li>
+            <li data-i18n="homeLearnBullet2">Warning signs and what they can mean</li>
+            <li data-i18n="homeLearnBullet3">How to respond without blame</li>
+          </ul>
+          <a class="btn btn--secondary" href="pages/learn.html" data-i18n="homeLearnCta">Go to Learn</a>
+        </div>
+
+        <div class="card card--teal">
+          <h2 class="h2" data-i18n="homePlayTitle">Knowledge Playground</h2>
+          <p data-i18n="homePlayBody">
+            Practice realistic situations with “What would you do?” decision trees. Get affirming feedback that teaches, never shames.
+          </p>
+          <ul class="bullets">
+            <li data-i18n="homePlayBullet1">Three tiers: Child, Teen/Adult, Professional</li>
+            <li data-i18n="homePlayBullet2">Progress tracking and completion states</li>
+            <li data-i18n="homePlayBullet3">Professional certificate available</li>
+          </ul>
+          <a class="btn btn--primary" href="pages/playground.html" data-i18n="homePlayCta">Start Playground</a>
+        </div>
+      </section>
+
+      <section class="card" aria-labelledby="heardTitle">
+        <div class="split">
+          <div>
+            <h2 class="h2" id="heardTitle" data-i18n="homeHeardTitle">Heard — an anonymous story wall</h2>
+            <p data-i18n="homeHeardBody">
+              Survivors can share one sentence anonymously. Softly animated. Moderated before public display. No accounts. No public like counts.
+            </p>
+            <div class="row">
+              <a class="btn btn--secondary" href="pages/about.html#heard" data-i18n="homeHeardCta">View Heard</a>
+              <a class="btn btn--ghost" href="pages/about.html#submit-heard" data-i18n="homeHeardSubmit">Submit a sentence</a>
+            </div>
+          </div>
+          <div class="mini-preview" aria-hidden="true">
+            <div class="mini-card">“I was believed.”</div>
+            <div class="mini-card">“It wasn’t my fault.”</div>
+            <div class="mini-card">“I found my voice again.”</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="footer-cta" aria-label="Privacy-first analytics note">
+        <p class="small" data-i18n="analyticsNote">
+          Privacy-first analytics (Plausible-style) is included as a mock integration. No invasive tracking.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container site-footer__inner">
+        <p class="small">
+          <span data-i18n="footerDisclaimerStrong"><strong>Important:</strong></span>
+          <span data-i18n="footerDisclaimerBody">This website provides education and navigation support. It is not a substitute for professional services.</span>
+        </p>
+        <div class="footer-links">
+          <a href="pages/get-help.html#crisis" data-i18n="footerCrisis">Crisis resources</a>
+          <a href="pages/about.html" data-i18n="footerAbout">About</a>
+          <a href="pages/about.html#privacy" data-i18n="footerPrivacy">Privacy</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+  </body>
+</html>

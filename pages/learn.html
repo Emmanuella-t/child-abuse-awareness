@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Learn about types of child abuse, warning signs, and how to talk to children in safe, calm language." />
+    <meta name="theme-color" content="#1B3A4B" />
+
+    <link rel="icon" href="../assets/icons/favicon.svg" />
+    <link rel="manifest" href="../manifest.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+
+    <title>Learn — Safeguard</title>
+
+    <!-- Schema.org WebPage -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Learn — Safeguard",
+        "description": "Educational content on child safety, warning signs, and supportive conversations.",
+        "url": "/pages/learn.html"
+      }
+    </script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="crisis-ribbon" role="region" aria-label="Crisis resources">
+      <div class="crisis-ribbon__inner">
+        <p class="crisis-ribbon__text" data-i18n="crisisRibbon">
+          If you or a child is in immediate danger, call your local emergency number now.
+        </p>
+        <div class="crisis-ribbon__actions">
+          <a class="btn btn--small btn--coral" href="get-help.html#crisis" data-i18n="crisisButton">Crisis resources</a>
+          <button class="btn btn--small btn--ghost" id="quickExitBtn" type="button" aria-label="Quick exit (opens weather)">
+            Quick Exit
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <header class="site-header" role="banner">
+      <div class="site-header__inner">
+        <a class="brand" href="../index.html" aria-label="Safeguard home">
+          <span class="brand__mark" aria-hidden="true">◎</span>
+          <span class="brand__text">Safeguard</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary">
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu">
+            <span class="sr-only">Open menu</span>
+            <span aria-hidden="true">☰</span>
+          </button>
+
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="learn.html" aria-current="page" data-i18n="navLearn">Learn</a></li>
+            <li><a href="get-help.html" data-i18n="navGetHelp">Get Help</a></li>
+            <li><a href="playground.html" data-i18n="navPlayground">Playground</a></li>
+            <li><a href="professionals.html" data-i18n="navPros">For Professionals</a></li>
+            <li><a href="about.html" data-i18n="navAbout">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="site-header__tools">
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button class="btn btn--small btn--ghost" type="button" data-lang="en" aria-pressed="true">EN</button>
+            <button class="btn btn--small btn--ghost" type="button" data-lang="es" aria-pressed="false">ES</button>
+          </div>
+          <a class="btn btn--small btn--coral" href="get-help.html#crisis" data-i18n="headerCrisis">Get crisis help</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="container" role="main">
+      <section class="card">
+        <p class="eyebrow">Learn</p>
+        <h1 class="display">Clear, gentle education that protects vulnerable readers</h1>
+        <p class="lead">
+          We explain safety topics without graphic detail or blame. If anything here feels activating, you can pause and go to
+          <a href="get-help.html#crisis" style="text-decoration: underline; text-underline-offset: 3px; color: var(--teal);">Crisis resources</a>
+          or use Quick Exit.
+        </p>
+
+        <div class="alert alert--info" role="note" aria-label="Safety note">
+          <p class="small" style="margin: 0;">
+            If you think a child may be unsafe right now, the safest step is to contact local emergency services or your local child protection hotline.
+            You do not have to prove anything to ask for help.
+          </p>
+        </div>
+      </section>
+
+      <section class="grid-2" aria-label="Learning topics">
+        <article class="card" id="types">
+          <h2 class="h2">Types of abuse (in safe language)</h2>
+          <p>
+            Abuse can look different in different homes. It can be a pattern, not a one time moment. If a child is being hurt, threatened,
+            controlled, or neglected, that matters.
+          </p>
+
+          <ul class="bullets">
+            <li><strong>Physical harm:</strong> a child is hurt on purpose or punished in a way that causes injury.</li>
+            <li><strong>Emotional harm:</strong> constant insults, threats, humiliation, or rejection that harms a child’s sense of safety.</li>
+            <li><strong>Neglect:</strong> a child’s basic needs are not being met consistently (food, medical care, supervision, safe shelter).</li>
+            <li><strong>Sexual abuse:</strong> any sexual behavior with a child or any sexual contact or exploitation.</li>
+            <li><strong>Online exploitation:</strong> grooming, coercion, or sharing content involving minors.</li>
+          </ul>
+
+          <div class="row">
+            <a class="btn btn--secondary" href="get-help.html">Get help options</a>
+            <a class="btn btn--ghost" href="playground.html?tier=teen">Practice scenarios</a>
+          </div>
+        </article>
+
+        <article class="card" id="signs">
+          <h2 class="h2">Warning signs (not proof, but signals)</h2>
+          <p>
+            A single sign does not confirm abuse. But patterns can signal that something is wrong. Trust your concern, especially when multiple
+            signs show up together or intensify over time.
+          </p>
+
+          <ul class="bullets">
+            <li><strong>Behavior shifts:</strong> sudden fearfulness, withdrawal, or unusually “on edge” behavior.</li>
+            <li><strong>School changes:</strong> frequent absences, focus issues, or sudden drop in performance.</li>
+            <li><strong>Health signals:</strong> unexplained injuries, frequent illness, or untreated medical needs.</li>
+            <li><strong>Protective behaviors:</strong> avoiding certain adults, flinching, or “walking on eggshells.”</li>
+            <li><strong>Adult like burden:</strong> a child taking on caregiving, secrecy, or responsibility that feels too heavy.</li>
+          </ul>
+
+          <div class="alert alert--warning" role="note" aria-label="Warning note">
+            <p class="small" style="margin: 0;">
+              Your role is not to investigate. Your role is to notice, document responsibly if needed, and connect the child to safe support.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <section class="card" id="talk">
+        <h2 class="h2">How to talk to children (calm, supportive, safe)</h2>
+        <p>
+          If a child shares something worrying, the most protective response is calm belief, no pressure, and safe next steps.
+          Avoid interrogating. Avoid promises you cannot keep. Focus on safety and care.
+        </p>
+
+        <div class="grid-2">
+          <div class="card" style="box-shadow:none; background: var(--surface-2); border: 1px solid var(--neutral-100);">
+            <h3 class="h3">What to say</h3>
+            <ul class="bullets">
+              <li>“Thank you for telling me.”</li>
+              <li>“I believe you.”</li>
+              <li>“You did the right thing by speaking up.”</li>
+              <li>“This is not your fault.”</li>
+              <li>“We will find a safe helper together.”</li>
+            </ul>
+          </div>
+
+          <div class="card" style="box-shadow:none; background: var(--surface-2); border: 1px solid var(--neutral-100);">
+            <h3 class="h3">What to avoid</h3>
+            <ul class="bullets">
+              <li>“Why didn’t you stop it?”</li>
+              <li>“Are you sure?”</li>
+              <li>“Don’t tell anyone else.”</li>
+              <li>“I promise I won’t tell anyone.”</li>
+              <li>Detailed questions that feel like an interview</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row">
+          <a class="btn btn--secondary" href="get-help.html#anonymous">Make an anonymous report plan</a>
+          <a class="btn btn--ghost" href="playground.html?tier=child">Child friendly practice</a>
+        </div>
+      </section>
+
+      <section class="card" id="knowledge-check" aria-labelledby="kcTitle">
+        <h2 class="h2" id="kcTitle">Mini knowledge check (3 choices at a time)</h2>
+        <p class="small">
+          This is a learning tool, not a test. Choose the option that feels most protective. You’ll see calm feedback and a suggested Playground tier.
+        </p>
+
+        <div class="alert alert--info" role="note">
+          <p class="small" style="margin: 0;">
+            Tip: If you are in crisis or immediate danger, skip this and go to <a href="get-help.html#crisis" style="text-decoration: underline; text-underline-offset: 3px;">Crisis resources</a>.
+          </p>
+        </div>
+
+        <!-- Q1 -->
+        <div class="card" style="box-shadow:none; background: var(--surface); border: 1px solid var(--neutral-100); margin-top: 16px;">
+          <h3 class="h3" style="margin-bottom: 8px;">1) A child says they feel unsafe around an adult. What is the best first response?</h3>
+          <div class="row">
+            <a class="btn btn--ghost" href="playground.html?tier=teen&start=q1a">“Tell me everything right now.”</a>
+            <a class="btn btn--secondary" href="playground.html?tier=teen&start=q1b">“Thank you for telling me. I believe you.”</a>
+            <a class="btn btn--ghost" href="playground.html?tier=teen&start=q1c">“Are you sure you’re not misunderstanding?”</a>
+          </div>
+
+          <details style="margin-top: 12px;">
+            <summary class="small" style="cursor: pointer;">Show learning feedback</summary>
+            <p class="small" style="margin-top: 10px;">
+              The safest first move is calm belief and reassurance. Avoid interrogation. You can gather essential info later with a trained helper.
+            </p>
+          </details>
+        </div>
+
+        <!-- Q2 -->
+        <div class="card" style="box-shadow:none; background: var(--surface); border: 1px solid var(--neutral-100); margin-top: 16px;">
+          <h3 class="h3" style="margin-bottom: 8px;">2) You notice multiple warning signs, but you are not 100 percent sure. What should you do?</h3>
+          <div class="row">
+            <a class="btn btn--ghost" href="playground.html?tier=pro&start=q2a">Investigate on your own until you have proof.</a>
+            <a class="btn btn--secondary" href="playground.html?tier=pro&start=q2b">Document concerns and contact the appropriate reporting resource.</a>
+            <a class="btn btn--ghost" href="playground.html?tier=pro&start=q2c">Wait and see, it might go away.</a>
+          </div>
+
+          <details style="margin-top: 12px;">
+            <summary class="small" style="cursor: pointer;">Show learning feedback</summary>
+            <p class="small" style="margin-top: 10px;">
+              You don’t need proof to seek help. Your job is to notice patterns and connect to the correct professional channel.
+            </p>
+          </details>
+        </div>
+
+        <!-- Q3 -->
+        <div class="card" style="box-shadow:none; background: var(--surface); border: 1px solid var(--neutral-100); margin-top: 16px;">
+          <h3 class="h3" style="margin-bottom: 8px;">3) Which message is most supportive for a child who shares something hard?</h3>
+          <div class="row">
+            <a class="btn btn--ghost" href="playground.html?tier=child&start=q3a">“You should have stopped it.”</a>
+            <a class="btn btn--secondary" href="playground.html?tier=child&start=q3b">“This is not your fault. You did the right thing.”</a>
+            <a class="btn btn--ghost" href="playground.html?tier=child&start=q3c">“We can’t tell anyone or we’ll get in trouble.”</a>
+          </div>
+
+          <details style="margin-top: 12px;">
+            <summary class="small" style="cursor: pointer;">Show learning feedback</summary>
+            <p class="small" style="margin-top: 10px;">
+              Supportive language reduces shame and increases safety. Make room for a safe helper, and avoid secrecy demands.
+            </p>
+          </details>
+        </div>
+
+        <div class="row" style="margin-top: 16px;">
+          <a class="btn btn--primary" href="playground.html">Go to Knowledge Playground</a>
+          <a class="btn btn--ghost" href="get-help.html">Skip and get support</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container site-footer__inner">
+        <p class="small">
+          <strong>Important:</strong> This website provides education and navigation support. It is not a substitute for professional services.
+        </p>
+        <div class="footer-links">
+          <a href="get-help.html#crisis">Crisis resources</a>
+          <a href="about.html">About</a>
+          <a href="about.html#privacy">Privacy</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/main.js" defer></script>
+  </body>
+</html>

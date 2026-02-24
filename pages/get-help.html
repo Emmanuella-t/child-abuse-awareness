@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Find crisis resources, make a safe plan, and locate help options. Privacy-first, calm, and clear." />
+    <meta name="theme-color" content="#1B3A4B" />
+
+    <link rel="icon" href="../assets/icons/favicon.svg" />
+    <link rel="manifest" href="../manifest.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+
+    <title>Get Help — Safeguard</title>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Get Help — Safeguard",
+        "description": "Crisis-forward resource navigation, anonymous reporting guidance, and safe planning tools.",
+        "url": "/pages/get-help.html"
+      }
+    </script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="crisis-ribbon" role="region" aria-label="Crisis resources">
+      <div class="crisis-ribbon__inner">
+        <p class="crisis-ribbon__text" data-i18n="crisisRibbon">
+          If you or a child is in immediate danger, call your local emergency number now.
+        </p>
+        <div class="crisis-ribbon__actions">
+          <a class="btn btn--small btn--coral" href="#crisis" data-i18n="crisisButton">Crisis resources</a>
+          <button class="btn btn--small btn--ghost" id="quickExitBtn" type="button" aria-label="Quick exit (opens weather)">
+            Quick Exit
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <header class="site-header" role="banner">
+      <div class="site-header__inner">
+        <a class="brand" href="../index.html" aria-label="Safeguard home">
+          <span class="brand__mark" aria-hidden="true">◎</span>
+          <span class="brand__text">Safeguard</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary">
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu">
+            <span class="sr-only">Open menu</span>
+            <span aria-hidden="true">☰</span>
+          </button>
+
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="learn.html" data-i18n="navLearn">Learn</a></li>
+            <li><a href="get-help.html" aria-current="page" data-i18n="navGetHelp">Get Help</a></li>
+            <li><a href="playground.html" data-i18n="navPlayground">Playground</a></li>
+            <li><a href="professionals.html" data-i18n="navPros">For Professionals</a></li>
+            <li><a href="about.html" data-i18n="navAbout">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="site-header__tools">
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button class="btn btn--small btn--ghost" type="button" data-lang="en" aria-pressed="true">EN</button>
+            <button class="btn btn--small btn--ghost" type="button" data-lang="es" aria-pressed="false">ES</button>
+          </div>
+          <a class="btn btn--small btn--coral" href="#crisis" data-i18n="headerCrisis">Get crisis help</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="container" role="main">
+      <section class="card">
+        <p class="eyebrow">Get Help</p>
+        <h1 class="display">Find a safe next step, without pressure</h1>
+        <p class="lead">
+          You do not have to explain everything to start getting help. Choose one option below. You can move slowly.
+        </p>
+
+        <div class="alert alert--info" role="note" aria-label="Privacy note">
+          <p class="small" style="margin: 0;">
+            Privacy first: We do not store your identity. Avoid typing names, addresses, or identifying details into any text box.
+          </p>
+        </div>
+      </section>
+
+      <!-- Crisis section -->
+      <section class="card" id="crisis" aria-labelledby="crisisTitle">
+        <h2 class="h2" id="crisisTitle">Crisis resources (always OK to use)</h2>
+        <p>
+          If a child is in immediate danger right now, call your local emergency number.
+          If it feels urgent but you’re unsure, it still counts as urgent.
+        </p>
+
+        <div class="alert alert--crisis" role="alert" aria-label="Crisis alert">
+          <p class="small" style="margin: 0;">
+            If you feel unsafe right now, stop here and reach out to local emergency services or a trusted adult nearby.
+          </p>
+        </div>
+
+        <div class="grid-2">
+          <div class="card" style="box-shadow:none; background: var(--surface-2); border: 1px solid var(--neutral-100);">
+            <h3 class="h3">Quick actions</h3>
+            <ul class="bullets">
+              <li>Call your local emergency number if immediate danger is present</li>
+              <li>Go to a safer place if you can (a neighbor, a public place, a trusted adult)</li>
+              <li>If you are a professional, follow your mandated reporting protocol</li>
+            </ul>
+          </div>
+
+          <div class="card" style="box-shadow:none; background: var(--surface-2); border: 1px solid var(--neutral-100);">
+            <h3 class="h3">If you cannot call</h3>
+            <ul class="bullets">
+              <li>Text a trusted person: “I need help. Can you stay with me?”</li>
+              <li>Use Quick Exit if someone is watching</li>
+              <li>Write down what you remember privately, later, if safe</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Path anchors (for home pathways) -->
+      <section class="grid-2" aria-label="Help pathways" style="margin-top: 16px;">
+        <article class="card" id="for-children">
+          <h2 class="h2">For children</h2>
+          <p>
+            If you feel unsafe, you deserve help. You are not in trouble. You can talk to a trusted adult like a teacher, school counselor,
+            coach, family member you trust, or a neighbor.
+          </p>
+          <div class="row">
+            <a class="btn btn--secondary" href="#anonymous">Make a simple plan</a>
+            <a class="btn btn--ghost" href="playground.html?tier=child">Practice what to say</a>
+          </div>
+        </article>
+
+        <article class="card" id="for-survivors">
+          <h2 class="h2">For survivors</h2>
+          <p>
+            You deserve support that respects your pace. If you want, you can start by exploring options without sharing details.
+          </p>
+          <div class="row">
+            <a class="btn btn--secondary" href="#resources">Find support resources</a>
+            <a class="btn btn--ghost" href="about.html#heard">Visit Heard</a>
+          </div>
+        </article>
+      </section>
+
+      <!-- Resource locator + AI matcher -->
+      <section class="card" id="resources" aria-labelledby="resourcesTitle" style="margin-top: 16px;">
+        <h2 class="h2" id="resourcesTitle">Resource locator</h2>
+        <p class="small">
+          You can type a city or region and what you need in plain language. We will surface up to 3 relevant options.
+          Please avoid names or identifying details.
+        </p>
+
+        <form id="resourceMatcherForm" novalidate aria-label="Resource matcher form">
+          <div class="grid-2">
+            <div class="form-group">
+              <label for="locationInput">Location (city, state, or country)</label>
+              <input id="locationInput" name="location" type="text" placeholder="Example: Little Rock, AR" autocomplete="off" />
+            </div>
+
+            <div class="form-group">
+              <label for="situationSelect">What best matches your situation?</label>
+              <select id="situationSelect" name="situation">
+                <option value="concerned_about_child">I’m worried about a child</option>
+                <option value="i_need_support">I need support for myself</option>
+                <option value="professional_reporting">I’m a professional needing reporting guidance</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="detailsInput">In one sentence, what do you need help with?</label>
+            <input
+              id="detailsInput"
+              name="details"
+              type="text"
+              placeholder="Example: I need to know who to contact to report a concern safely."
+              autocomplete="off"
+              maxlength="220"
+            />
+            <p class="kbd-hint" style="margin-top: 6px;">
+              Keep it general. Do not include names, addresses, school names, or phone numbers.
+            </p>
+          </div>
+
+          <div class="row">
+            <button class="btn btn--primary" type="submit">Find resources</button>
+            <a class="btn btn--ghost" href="#safeguide">Use SafeGuide AI</a>
+          </div>
+        </form>
+
+        <div id="resourceResults" class="card" style="display:none; margin-top: 16px; box-shadow:none; background: var(--surface-2);">
+          <h3 class="h3" style="margin-bottom: 8px;">Suggested options</h3>
+          <div id="resourceResultsList" class="bullets" style="list-style: none; padding-left: 0; margin: 0;"></div>
+          <p class="small" style="margin-top: 12px;">
+            This is not a substitute for professional support. If danger is immediate, use crisis resources above.
+          </p>
+        </div>
+      </section>
+
+      <!-- Anonymous reporting flow (3 choices at a time) -->
+      <section class="card" id="anonymous" aria-labelledby="anonTitle" style="margin-top: 16px;">
+        <h2 class="h2" id="anonTitle">Anonymous reporting flow (step by step)</h2>
+        <p class="small">
+          This flow helps you choose a next step. It does not send anything automatically. It’s a planning tool.
+        </p>
+
+        <div class="alert alert--info" role="note">
+          <p class="small" style="margin: 0;">
+            No more than 3 choices at a time. Choose what feels most protective.
+          </p>
+        </div>
+
+        <div class="card" style="box-shadow:none; border: 1px solid var(--neutral-100); background: var(--surface); margin-top: 16px;">
+          <h3 class="h3" style="margin-bottom: 8px;">Step 1: What is happening right now?</h3>
+          <div class="row">
+            <button class="btn btn--coral" type="button" data-anon-step="1" data-choice="immediate_danger">Immediate danger</button>
+            <button class="btn btn--secondary" type="button" data-anon-step="1" data-choice="not_immediate">Not immediate, but serious</button>
+            <button class="btn btn--ghost" type="button" data-anon-step="1" data-choice="unsure">I’m not sure</button>
+          </div>
+          <div id="anonFeedback1" class="alert" style="display:none; margin-top: 12px;"></div>
+        </div>
+
+        <div class="card" style="box-shadow:none; border: 1px solid var(--neutral-100); background: var(--surface); margin-top: 16px;">
+          <h3 class="h3" style="margin-bottom: 8px;">Step 2: Who are you acting as?</h3>
+          <div class="row">
+            <button class="btn btn--secondary" type="button" data-anon-step="2" data-choice="child">A child or teen</button>
+            <button class="btn btn--secondary" type="button" data-anon-step="2" data-choice="caregiver">A parent or caregiver</button>
+            <button class="btn btn--secondary" type="button" data-anon-step="2" data-choice="professional">An educator or professional</button>
+          </div>
+          <div id="anonFeedback2" class="alert" style="display:none; margin-top: 12px;"></div>
+        </div>
+
+        <div class="card" style="box-shadow:none; border: 1px solid var(--neutral-100); background: var(--surface); margin-top: 16px;">
+          <h3 class="h3" style="margin-bottom: 8px;">Step 3: What kind of help feels possible today?</h3>
+          <div class="row">
+            <button class="btn btn--primary" type="button" data-anon-step="3" data-choice="call">Call a hotline or local resource</button>
+            <button class="btn btn--ghost" type="button" data-anon-step="3" data-choice="tell_trusted">Tell a trusted adult in person</button>
+            <button class="btn btn--ghost" type="button" data-anon-step="3" data-choice="plan">Make a private plan first</button>
+          </div>
+          <div id="anonFeedback3" class="alert" style="display:none; margin-top: 12px;"></div>
+        </div>
+
+        <div class="card" id="anonSummary" style="display:none; margin-top: 16px; box-shadow:none; background: var(--surface-2); border: 1px solid var(--neutral-100);">
+          <h3 class="h3">Your suggested next step</h3>
+          <p id="anonSummaryText" class="small" style="margin-bottom: 12px;"></p>
+          <div class="row">
+            <a class="btn btn--coral" href="#crisis">Go to crisis resources</a>
+            <a class="btn btn--secondary" href="#resources">Use resource locator</a>
+            <a class="btn btn--ghost" href="playground.html">Practice scenarios</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- SafeGuide AI Companion -->
+      <section class="card" id="safeguide" aria-labelledby="sgTitle" style="margin-top: 16px;">
+        <h2 class="h2" id="sgTitle">SafeGuide AI Companion</h2>
+        <p class="small">
+          SafeGuide helps you navigate this site by situation. It is not counseling and it cannot replace professional support.
+          If your message suggests danger, we will pause and show crisis options.
+        </p>
+
+        <div class="alert alert--warning" role="note">
+          <p class="small" style="margin: 0;">
+            Please avoid names, addresses, schools, phone numbers, or anything identifying. Keep details general.
+          </p>
+        </div>
+
+        <div class="ai-panel" aria-label="SafeGuide AI panel">
+          <div class="ai-panel__header">
+            <div>
+              <span class="badge">AI</span>
+              <span class="small" style="margin-left: 8px;">
+                Always: “This is not a substitute for professional support.”
+              </span>
+            </div>
+            <button class="btn btn--small btn--ghost" type="button" id="clearAiChatBtn">Clear</button>
+          </div>
+
+          <div class="ai-panel__messages" id="aiMessages" aria-live="polite" aria-label="AI conversation"></div>
+
+          <form id="aiChatForm" novalidate>
+            <div class="form-group" style="margin-bottom: 12px;">
+              <label for="aiInput">What’s going on (in general terms)?</label>
+              <input
+                id="aiInput"
+                type="text"
+                maxlength="240"
+                placeholder="Example: I’m worried about a child and I don’t know what to do next."
+                autocomplete="off"
+              />
+              <p class="kbd-hint" style="margin-top: 6px;">
+                Keep it short and non identifying.
+              </p>
+            </div>
+            <div class="row">
+              <button class="btn btn--secondary" type="submit">Ask SafeGuide</button>
+              <a class="btn btn--ghost" href="#crisis">If urgent, go to crisis resources</a>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container site-footer__inner">
+        <p class="small">
+          <strong>Important:</strong> This website provides education and navigation support. It is not a substitute for professional services.
+        </p>
+        <div class="footer-links">
+          <a href="#crisis">Crisis resources</a>
+          <a href="about.html">About</a>
+          <a href="about.html#privacy">Privacy</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/main.js" defer></script>
+    <script src="../js/ai.js" defer></script>
+  </body>
+</html>
