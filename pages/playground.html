@@ -1,0 +1,283 @@
+
+<!doctype html>
+<html lang="en" data-lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Practice safe decision-making with branching scenarios, reporting simulations, and affirming feedback. Three tiers: Child, Teen/Adult, Professional." />
+    <meta name="theme-color" content="#1B3A4B" />
+
+    <link rel="icon" href="../assets/icons/favicon.svg" />
+    <link rel="manifest" href="../manifest.webmanifest" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/components.css" />
+
+    <title>Knowledge Playground — Safeguard</title>
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        "name": "Knowledge Playground — Safeguard",
+        "description": "Interactive learning with branching decision trees and reporting simulations.",
+        "url": "/pages/playground.html"
+      }
+    </script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="crisis-ribbon" role="region" aria-label="Crisis resources">
+      <div class="crisis-ribbon__inner">
+        <p class="crisis-ribbon__text" data-i18n="crisisRibbon">
+          If you or a child is in immediate danger, call your local emergency number now.
+        </p>
+        <div class="crisis-ribbon__actions">
+          <a class="btn btn--small btn--coral" href="get-help.html#crisis" data-i18n="crisisButton">Crisis resources</a>
+          <button class="btn btn--small btn--ghost" id="quickExitBtn" type="button" aria-label="Quick exit (opens weather)">
+            Quick Exit
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <header class="site-header" role="banner">
+      <div class="site-header__inner">
+        <a class="brand" href="../index.html" aria-label="Safeguard home">
+          <span class="brand__mark" aria-hidden="true">◎</span>
+          <span class="brand__text">Safeguard</span>
+        </a>
+
+        <nav class="site-nav" aria-label="Primary">
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="navMenu">
+            <span class="sr-only">Open menu</span>
+            <span aria-hidden="true">☰</span>
+          </button>
+
+          <ul class="nav-menu" id="navMenu">
+            <li><a href="learn.html" data-i18n="navLearn">Learn</a></li>
+            <li><a href="get-help.html" data-i18n="navGetHelp">Get Help</a></li>
+            <li><a href="playground.html" aria-current="page" data-i18n="navPlayground">Playground</a></li>
+            <li><a href="professionals.html" data-i18n="navPros">For Professionals</a></li>
+            <li><a href="about.html" data-i18n="navAbout">About</a></li>
+          </ul>
+        </nav>
+
+        <div class="site-header__tools">
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button class="btn btn--small btn--ghost" type="button" data-lang="en" aria-pressed="true">EN</button>
+            <button class="btn btn--small btn--ghost" type="button" data-lang="es" aria-pressed="false">ES</button>
+          </div>
+          <a class="btn btn--small btn--coral" href="get-help.html#crisis" data-i18n="headerCrisis">Get crisis help</a>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="container" role="main">
+      <section class="card">
+        <p class="eyebrow">Knowledge Playground</p>
+        <h1 class="display">Practice what to do, with affirming feedback</h1>
+        <p class="lead">
+          This is a practice space. You are not being judged. You’ll get calm explanations that teach, never shame.
+          If anything feels urgent, use <a href="get-help.html#crisis" style="text-decoration: underline; text-underline-offset: 3px; color: var(--teal);">Crisis resources</a>.
+        </p>
+
+        <div class="alert alert--info" role="note">
+          <p class="small" style="margin: 0;">
+            Privacy reminder: Do not type names, addresses, school names, or identifying details. This tool is for learning and planning.
+          </p>
+        </div>
+      </section>
+
+      <!-- Tier selection -->
+      <section class="card" aria-labelledby="tierTitle" style="margin-top: 16px;">
+        <h2 class="h2" id="tierTitle">Choose your tier</h2>
+        <p class="small">Pick the version that matches your role. You can switch anytime.</p>
+
+        <!-- 3 choices at a time -->
+        <div class="row" role="group" aria-label="Tier choices">
+          <button class="btn btn--secondary" type="button" data-tier="child">Child (8–12)</button>
+          <button class="btn btn--secondary" type="button" data-tier="teen">Teen / Adult</button>
+          <button class="btn btn--secondary" type="button" data-tier="pro">Professional</button>
+        </div>
+
+        <div class="soft-divider" aria-hidden="true"></div>
+
+        <!-- Progress -->
+        <div class="progress" aria-label="Progress">
+          <div class="progress__bar" id="pgProgressBar" style="width: 0%;" aria-hidden="true"></div>
+        </div>
+        <p class="small" style="margin-top: 10px;">
+          <span id="pgProgressText">0% complete</span>
+        </p>
+      </section>
+
+      <!-- Scenario engine -->
+      <section class="card" aria-labelledby="scenarioTitle" style="margin-top: 16px;">
+        <h2 class="h2" id="scenarioTitle">Scenario practice: “What would you do?”</h2>
+        <p class="small">
+          You’ll see a situation and choose between up to three options. After each choice, you’ll receive affirming feedback and a next step.
+        </p>
+
+        <div class="alert alert--warning" id="pgTierHint" role="note">
+          <p class="small" style="margin: 0;">
+            Choose a tier above to begin. If you’re not sure, Teen / Adult is a good starting point.
+          </p>
+        </div>
+
+        <div class="card" id="scenarioCard" style="display:none; margin-top: 16px; box-shadow:none; background: var(--surface-2); border: 1px solid var(--neutral-100);">
+          <div class="row" style="justify-content: space-between; align-items: center; margin-top: 0;">
+            <span class="chip chip--teal" id="scenarioTierChip">Tier</span>
+            <span class="small" id="scenarioStepLabel">Step</span>
+          </div>
+
+          <h3 class="h3" id="scenarioPrompt" style="margin-top: 12px;">Scenario prompt</h3>
+          <p class="small" id="scenarioSupport">Supportive framing text</p>
+
+          <!-- Choices: max 3 -->
+          <div class="row" id="scenarioChoices" aria-label="Scenario choices"></div>
+
+          <!-- Feedback -->
+          <div class="alert alert--info" id="scenarioFeedback" style="display:none; margin-top: 16px;" aria-live="polite"></div>
+
+          <div class="row" style="margin-top: 12px;">
+            <button class="btn btn--ghost" type="button" id="scenarioRestartBtn">Restart scenario</button>
+            <a class="btn btn--ghost" href="get-help.html#crisis">If urgent, crisis resources</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Reporting simulation -->
+      <section class="card" aria-labelledby="reportTitle" style="margin-top: 16px;">
+        <h2 class="h2" id="reportTitle">Reporting simulation (step by step)</h2>
+        <p class="small">
+          This is a simulation that helps you practice what reporting can feel like. It does not send a report. It helps you plan.
+        </p>
+
+        <div class="grid-2">
+          <div class="card" style="box-shadow:none; background: var(--surface-2); border: 1px solid var(--neutral-100);">
+            <h3 class="h3">What you practice</h3>
+            <ul class="bullets">
+              <li>Staying calm and specific without overexplaining</li>
+              <li>Focusing on safety and observable facts</li>
+              <li>Knowing what you can say and what you can’t promise</li>
+            </ul>
+          </div>
+
+          <div class="card" style="box-shadow:none; background: var(--surface-2); border: 1px solid var(--neutral-100);">
+            <h3 class="h3">What we avoid</h3>
+            <ul class="bullets">
+              <li>Graphic descriptions</li>
+              <li>Investigation instructions</li>
+              <li>Storing any personal information</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row" style="margin-top: 16px;">
+          <button class="btn btn--primary" type="button" id="reportStartBtn">Start reporting simulation</button>
+          <button class="btn btn--ghost" type="button" id="reportResetBtn">Reset</button>
+        </div>
+
+        <div class="card" id="reportFlow" style="display:none; margin-top: 16px; box-shadow:none; background: var(--surface); border: 1px solid var(--neutral-100);">
+          <h3 class="h3" id="reportStepTitle">Step</h3>
+          <p class="small" id="reportStepBody">Body</p>
+
+          <div class="row" id="reportChoices"></div>
+
+          <div class="alert alert--info" id="reportFeedback" style="display:none; margin-top: 12px;"></div>
+        </div>
+      </section>
+
+      <!-- Knowledge check quizzes -->
+      <section class="card" aria-labelledby="quizTitle" style="margin-top: 16px;">
+        <h2 class="h2" id="quizTitle">Knowledge checks</h2>
+        <p class="small">
+          These checks are for learning. You’ll get instant educational feedback.
+        </p>
+
+        <div class="card" style="box-shadow:none; background: var(--surface-2); border: 1px solid var(--neutral-100);">
+          <h3 class="h3">Quiz 1: What is the safest first response?</h3>
+          <p class="small">A child shares something worrying. What is the best first response?</p>
+
+          <div class="row">
+            <button class="btn btn--ghost" type="button" data-quiz="q1" data-answer="a">“Tell me every detail right now.”</button>
+            <button class="btn btn--secondary" type="button" data-quiz="q1" data-answer="b">“Thank you for telling me. I believe you.”</button>
+            <button class="btn btn--ghost" type="button" data-quiz="q1" data-answer="c">“Are you sure?”</button>
+          </div>
+
+          <div class="alert" id="quizFeedbackQ1" style="display:none; margin-top: 12px;"></div>
+        </div>
+
+        <div class="card" style="box-shadow:none; background: var(--surface-2); border: 1px solid var(--neutral-100); margin-top: 16px;">
+          <h3 class="h3">Quiz 2: Do you need proof to report?</h3>
+          <p class="small">As an adult or professional, do you need proof before reaching out to the right reporting resource?</p>
+
+          <div class="row">
+            <button class="btn btn--ghost" type="button" data-quiz="q2" data-answer="a">Yes, proof is required.</button>
+            <button class="btn btn--secondary" type="button" data-quiz="q2" data-answer="b">No. Reasonable concern is enough to seek help.</button>
+            <button class="btn btn--ghost" type="button" data-quiz="q2" data-answer="c">Only if multiple adults agree.</button>
+          </div>
+
+          <div class="alert" id="quizFeedbackQ2" style="display:none; margin-top: 12px;"></div>
+        </div>
+      </section>
+
+      <!-- Completion + Professional certificate -->
+      <section class="card" id="completion" aria-labelledby="completionTitle" style="margin-top: 16px;">
+        <h2 class="h2" id="completionTitle">Completion</h2>
+        <p class="small">
+          When you finish the Professional tier scenario and reporting simulation, you can generate a printable certificate.
+        </p>
+
+        <div class="row">
+          <button class="btn btn--secondary" type="button" id="markCompleteBtn">Mark section complete</button>
+          <button class="btn btn--ghost" type="button" id="resetProgressBtn">Reset progress</button>
+        </div>
+
+        <div class="certificate" id="certificateBlock" style="display:none; margin-top: 16px;">
+          <h2>Certificate of Completion</h2>
+          <p class="small" style="margin: 0 0 16px;">
+            This certificate confirms completion of the Safeguard Professional Knowledge Playground module.
+          </p>
+
+          <div class="form-group" style="max-width: 520px; margin: 0 auto 16px;">
+            <label for="certName">Name (optional)</label>
+            <input id="certName" type="text" maxlength="60" placeholder="Example: Alex Johnson" autocomplete="off" />
+            <p class="kbd-hint" style="margin-top: 6px;">Optional. Avoid adding sensitive identifiers if you’re sharing publicly.</p>
+          </div>
+
+          <div class="row" style="justify-content:center;">
+            <button class="btn btn--primary" type="button" id="downloadCertBtn">Download certificate (PDF)</button>
+          </div>
+
+          <p class="small" style="margin-top: 12px;">
+            Note: The certificate is generated on your device. Nothing is uploaded.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" role="contentinfo">
+      <div class="container site-footer__inner">
+        <p class="small">
+          <strong>Important:</strong> This website provides education and navigation support. It is not a substitute for professional services.
+        </p>
+        <div class="footer-links">
+          <a href="get-help.html#crisis">Crisis resources</a>
+          <a href="about.html">About</a>
+          <a href="about.html#privacy">Privacy</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="../js/main.js" defer></script>
+    <script src="../js/playground.js" defer></script>
+  </body>
+</html>
