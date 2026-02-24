@@ -3,30 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Guidance and tools for educators and professionals. Mandated reporting overview, toolkit downloads, and completion certificate flow." />
+    <meta
+      name="description"
+      content="Guidance for professionals and mandated reporters, toolkits, and completion certificate flow."
+    />
     <meta name="theme-color" content="#1B3A4B" />
 
-    <link rel="icon" href="../assets/icons/favicon.svg" />
-    <link rel="manifest" href="../manifest.webmanifest" />
+    <link rel="icon" href="/assets/icons/favicon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/components.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/components.css" />
+    <script src="/js/main.js" defer></script>
 
     <title>For Professionals — Safeguard</title>
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "For Professionals — Safeguard",
-        "description": "Mandated reporter overview, downloadable toolkit, and professional learning flow.",
-        "url": "/pages/professionals.html"
-      }
-    </script>
   </head>
 
   <body>
@@ -38,7 +35,7 @@
           If you or a child is in immediate danger, call your local emergency number now.
         </p>
         <div class="crisis-ribbon__actions">
-          <a class="btn btn--small btn--coral" href="get-help.html#crisis" data-i18n="crisisButton">Crisis resources</a>
+          <a class="btn btn--small btn--coral" href="/pages/get-help.html#crisis" data-i18n="crisisButton">Crisis resources</a>
           <button class="btn btn--small btn--ghost" id="quickExitBtn" type="button" aria-label="Quick exit (opens weather)">
             Quick Exit
           </button>
@@ -48,7 +45,7 @@
 
     <header class="site-header" role="banner">
       <div class="site-header__inner">
-        <a class="brand" href="../index.html" aria-label="Safeguard home">
+        <a class="brand" href="/index.html" aria-label="Safeguard home">
           <span class="brand__mark" aria-hidden="true">◎</span>
           <span class="brand__text">Safeguard</span>
         </a>
@@ -60,11 +57,11 @@
           </button>
 
           <ul class="nav-menu" id="navMenu">
-            <li><a href="learn.html" data-i18n="navLearn">Learn</a></li>
-            <li><a href="get-help.html" data-i18n="navGetHelp">Get Help</a></li>
-            <li><a href="playground.html" data-i18n="navPlayground">Playground</a></li>
-            <li><a href="professionals.html" aria-current="page" data-i18n="navPros">For Professionals</a></li>
-            <li><a href="about.html" data-i18n="navAbout">About</a></li>
+            <li><a href="/pages/learn.html" data-i18n="navLearn">Learn</a></li>
+            <li><a href="/pages/get-help.html" data-i18n="navGetHelp">Get Help</a></li>
+            <li><a href="/pages/playground.html" data-i18n="navPlayground">Playground</a></li>
+            <li><a href="/pages/professionals.html" aria-current="page" data-i18n="navPros">For Professionals</a></li>
+            <li><a href="/pages/about.html" data-i18n="navAbout">About</a></li>
           </ul>
         </nav>
 
@@ -73,7 +70,7 @@
             <button class="btn btn--small btn--ghost" type="button" data-lang="en" aria-pressed="true">EN</button>
             <button class="btn btn--small btn--ghost" type="button" data-lang="es" aria-pressed="false">ES</button>
           </div>
-          <a class="btn btn--small btn--coral" href="get-help.html#crisis" data-i18n="headerCrisis">Get crisis help</a>
+          <a class="btn btn--small btn--coral" href="/pages/get-help.html#crisis" data-i18n="headerCrisis">Get crisis help</a>
         </div>
       </div>
     </header>
@@ -81,160 +78,48 @@
     <main id="main" class="container" role="main">
       <section class="card">
         <p class="eyebrow">For Professionals</p>
-        <h1 class="display">Protective action, clear process, human language</h1>
+        <h1 class="display">Mandated reporting guidance, training, and toolkit</h1>
         <p class="lead">
-          This page supports educators and professionals with general guidance and tools. It is not legal advice.
-          Always follow your local laws, organizational policy, and training.
+          This page is educational and not legal advice. Follow your jurisdiction’s policy and reporting laws. If a child is in immediate danger, call emergency services.
         </p>
-
-        <div class="alert alert--info" role="note">
-          <p class="small" style="margin: 0;">
-            If you believe a child is in immediate danger, contact local emergency services now.
-            For non emergency concerns, follow your mandated reporting protocol.
-          </p>
-        </div>
       </section>
 
-      <section class="grid-2" style="margin-top: 16px;">
-        <article class="card">
-          <h2 class="h2">Mandated reporting overview (general)</h2>
-          <p>
-            In many regions, certain professionals are required to report reasonable suspicion of child abuse or neglect.
-            “Reasonable suspicion” often means you have a concern based on what you observed or what was disclosed.
-          </p>
-
+      <section class="grid-2">
+        <article class="card" id="reporting">
+          <h2 class="h2">Mandated reporter: what to do</h2>
           <ul class="bullets">
-            <li><strong>Your role is not to investigate.</strong> It is to report and connect to the correct channel.</li>
-            <li><strong>Stay calm and supportive.</strong> Your reaction affects safety and disclosure.</li>
-            <li><strong>Document responsibly.</strong> Note time, date, observable facts, and exact quotes when appropriate.</li>
-            <li><strong>Share only with those who must know.</strong> Confidentiality and privacy reduce harm.</li>
+            <li>Notice and document factual observations (dates, statements, visible injuries).</li>
+            <li>Do not investigate. Do not promise secrecy.</li>
+            <li>Follow your organization’s reporting workflow.</li>
+            <li>Contact the appropriate child protection agency or hotline for your area.</li>
           </ul>
 
           <div class="row">
-            <a class="btn btn--secondary" href="playground.html?tier=pro">Start Professional Playground</a>
-            <a class="btn btn--ghost" href="get-help.html#resources">Find reporting resources</a>
+            <a class="btn btn--secondary" href="/pages/get-help.html#anonymous">Anonymous reporting plan</a>
+            <a class="btn btn--ghost" href="/pages/playground.html?tier=pro">Practice scenarios</a>
           </div>
         </article>
 
         <article class="card">
-          <h2 class="h2">What to say in the moment</h2>
-          <p>
-            If a student discloses something concerning, keep it simple and protective. Avoid shock. Avoid promises you can’t keep.
+          <h2 class="h2">Toolkit</h2>
+          <p class="small">
+            Add your downloadable PDF/ZIP inside <code>/toolkit</code> and link it here.
           </p>
-
-          <div class="card" style="box-shadow:none; background: var(--surface-2); border: 1px solid var(--neutral-100);">
-            <h3 class="h3">Supportive phrases</h3>
-            <ul class="bullets">
-              <li>“Thank you for telling me.”</li>
-              <li>“I believe you.”</li>
-              <li>“You are not in trouble.”</li>
-              <li>“My job is to help keep you safe.”</li>
-              <li>“I will share only with people whose job is to protect you.”</li>
-            </ul>
-          </div>
-
-          <div class="row" style="margin-top: 16px;">
-            <a class="btn btn--secondary" href="playground.html#reportTitle">Practice reporting simulation</a>
-            <a class="btn btn--ghost" href="learn.html#talk">See child safe conversation tips</a>
+          <div class="row">
+            <a class="btn btn--primary" href="/toolkit/" aria-label="Open toolkit folder">Open toolkit</a>
+            <a class="btn btn--ghost" href="#certificate">Certificate flow</a>
           </div>
         </article>
       </section>
 
-      <!-- Decision helper: 3 choices max -->
-      <section class="card" style="margin-top: 16px;" aria-labelledby="helperTitle">
-        <h2 class="h2" id="helperTitle">Decision helper (3 choices max)</h2>
-        <p class="small">
-          Choose what best matches your situation. This does not replace policy. It helps you choose the safest next step.
-        </p>
-
-        <div class="card" style="box-shadow:none; border: 1px solid var(--neutral-100); background: var(--surface);">
-          <h3 class="h3" style="margin-bottom: 8px;">1) Is there immediate danger?</h3>
-          <div class="row">
-            <button class="btn btn--coral" type="button" data-pro-help="danger" data-choice="yes">Yes</button>
-            <button class="btn btn--secondary" type="button" data-pro-help="danger" data-choice="no">No</button>
-            <button class="btn btn--ghost" type="button" data-pro-help="danger" data-choice="unsure">Unsure</button>
-          </div>
-          <div id="proHelpFeedback1" class="alert" style="display:none; margin-top: 12px;"></div>
-        </div>
-
-        <div class="card" style="box-shadow:none; border: 1px solid var(--neutral-100); background: var(--surface); margin-top: 16px;">
-          <h3 class="h3" style="margin-bottom: 8px;">2) What do you have?</h3>
-          <div class="row">
-            <button class="btn btn--secondary" type="button" data-pro-help="evidence" data-choice="disclosure">A disclosure</button>
-            <button class="btn btn--secondary" type="button" data-pro-help="evidence" data-choice="observations">Observations / patterns</button>
-            <button class="btn btn--secondary" type="button" data-pro-help="evidence" data-choice="thirdparty">Third party concern</button>
-          </div>
-          <div id="proHelpFeedback2" class="alert" style="display:none; margin-top: 12px;"></div>
-        </div>
-
-        <div class="card" style="box-shadow:none; border: 1px solid var(--neutral-100); background: var(--surface); margin-top: 16px;">
-          <h3 class="h3" style="margin-bottom: 8px;">3) What is your next step today?</h3>
-          <div class="row">
-            <button class="btn btn--primary" type="button" data-pro-help="next" data-choice="report">Follow reporting channel</button>
-            <button class="btn btn--ghost" type="button" data-pro-help="next" data-choice="supervisor">Contact your designated supervisor</button>
-            <button class="btn btn--ghost" type="button" data-pro-help="next" data-choice="document">Document responsibly first</button>
-          </div>
-          <div id="proHelpFeedback3" class="alert" style="display:none; margin-top: 12px;"></div>
-        </div>
-
-        <div class="card" id="proHelpSummary" style="display:none; margin-top: 16px; box-shadow:none; background: var(--surface-2); border: 1px solid var(--neutral-100);">
-          <h3 class="h3">Suggested action</h3>
-          <p id="proHelpSummaryText" class="small" style="margin-bottom: 12px;"></p>
-          <div class="row">
-            <a class="btn btn--coral" href="get-help.html#crisis">Crisis resources</a>
-            <a class="btn btn--secondary" href="get-help.html#resources">Resource locator</a>
-            <a class="btn btn--ghost" href="playground.html?tier=pro">Practice again</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Toolkit downloads -->
-      <section class="card" style="margin-top: 16px;" aria-labelledby="toolkitTitle">
-        <h2 class="h2" id="toolkitTitle">Downloadable toolkit</h2>
-        <p class="small">
-          These are starter templates you can adapt to your organization’s policy. Replace placeholders with local reporting contacts.
-        </p>
-
-        <div class="grid-2">
-          <div class="card" style="box-shadow:none; background: var(--surface-2); border: 1px solid var(--neutral-100);">
-            <h3 class="h3">Checklist: first response</h3>
-            <ul class="bullets">
-              <li>Stay calm and supportive</li>
-              <li>Do not interrogate</li>
-              <li>Focus on immediate safety</li>
-              <li>Document observable facts</li>
-              <li>Report via official channel</li>
-            </ul>
-            <div class="row">
-              <a class="btn btn--secondary" href="../assets/toolkit/first-response-checklist.txt" download>Download checklist</a>
-            </div>
-            <p class="kbd-hint" style="margin-top: 10px;">We’ll add the toolkit files in the /assets folder soon.</p>
-          </div>
-
-          <div class="card" style="box-shadow:none; background: var(--surface-2); border: 1px solid var(--neutral-100);">
-            <h3 class="h3">Template: documentation notes</h3>
-            <p class="small">
-              A simple template for documenting concerns in a factual way, aligned to privacy and confidentiality.
-            </p>
-            <div class="row">
-              <a class="btn btn--secondary" href="../assets/toolkit/documentation-template.txt" download>Download template</a>
-            </div>
-            <p class="kbd-hint" style="margin-top: 10px;">Keep notes secure. Share only with those who must know.</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- Certificate flow -->
-      <section class="card" style="margin-top: 16px;" aria-labelledby="certTitle">
-        <h2 class="h2" id="certTitle">Certificate flow</h2>
+      <section class="card" id="certificate">
+        <h2 class="h2">Completion certificate</h2>
         <p>
-          The certificate is available after you complete the Professional tier scenario and reporting simulation in the Knowledge Playground.
-          The certificate is generated on your device. Nothing is uploaded.
+          Professionals can complete the Playground tier and generate a completion certificate locally on device.
         </p>
-
         <div class="row">
-          <a class="btn btn--primary" href="playground.html?tier=pro#completion">Go to certificate</a>
-          <a class="btn btn--ghost" href="playground.html?tier=pro">Start Professional tier</a>
+          <a class="btn btn--primary" href="/pages/playground.html?tier=pro">Start professional tier</a>
+          <a class="btn btn--ghost" href="/pages/about.html#privacy">Privacy policy</a>
         </div>
       </section>
     </main>
@@ -242,116 +127,14 @@
     <footer class="site-footer" role="contentinfo">
       <div class="container site-footer__inner">
         <p class="small">
-          <strong>Important:</strong> This website provides education and navigation support. It is not legal advice and not a substitute for professional services.
+          <strong>Important:</strong> This website provides education and navigation support. It is not a substitute for professional services.
         </p>
         <div class="footer-links">
-          <a href="get-help.html#crisis">Crisis resources</a>
-          <a href="about.html">About</a>
-          <a href="about.html#privacy">Privacy</a>
+          <a href="/pages/get-help.html#crisis">Crisis resources</a>
+          <a href="/pages/about.html">About</a>
+          <a href="/pages/about.html#privacy">Privacy</a>
         </div>
       </div>
     </footer>
-
-    <script src="../js/main.js" defer></script>
-
-    <!-- Small inline behavior: pro decision helper (deterministic, not AI) -->
-    <script>
-      (function () {
-        const buttons = document.querySelectorAll("[data-pro-help]");
-        if (!buttons.length) return;
-
-        const state = { danger: null, evidence: null, next: null };
-
-        function show(id, html, cls) {
-          const el = document.getElementById(id);
-          if (!el) return;
-          el.style.display = "block";
-          el.className = cls;
-          el.innerHTML = html;
-        }
-
-        function updateSummary() {
-          const summary = document.getElementById("proHelpSummary");
-          const txt = document.getElementById("proHelpSummaryText");
-          if (!summary || !txt) return;
-
-          if (!state.danger || !state.evidence || !state.next) return;
-
-          summary.style.display = "block";
-
-          if (state.danger === "yes") {
-            txt.textContent =
-              "Because there may be immediate danger, start with crisis resources and your emergency protocol. Then follow your mandated reporting process.";
-            return;
-          }
-
-          txt.textContent =
-            "A protective next step is to follow your official reporting channel, document observable facts, and share only with those who must know.";
-        }
-
-        buttons.forEach((btn) => {
-          btn.addEventListener("click", () => {
-            const group = btn.getAttribute("data-pro-help");
-            const choice = btn.getAttribute("data-choice");
-
-            state[group] = choice;
-
-            if (group === "danger") {
-              if (choice === "yes") {
-                show(
-                  "proHelpFeedback1",
-                  `<p class="small" style="margin:0;"><strong>Immediate danger:</strong> use emergency protocol now. Protect safety first.</p>`,
-                  "alert alert--crisis"
-                );
-              } else if (choice === "no") {
-                show(
-                  "proHelpFeedback1",
-                  `<p class="small" style="margin:0;">You can proceed with reporting protocol and documentation. You do not need proof.</p>`,
-                  "alert alert--info"
-                );
-              } else {
-                show(
-                  "proHelpFeedback1",
-                  `<p class="small" style="margin:0;">If you are unsure, it’s okay to treat it as serious and consult the appropriate reporting resource.</p>`,
-                  "alert alert--warning"
-                );
-              }
-            }
-
-            if (group === "evidence") {
-              show(
-                "proHelpFeedback2",
-                `<p class="small" style="margin:0;">Thank you. Your next step can be the same: calm support, responsible documentation, and official reporting.</p>`,
-                "alert alert--info"
-              );
-            }
-
-            if (group === "next") {
-              if (choice === "report") {
-                show(
-                  "proHelpFeedback3",
-                  `<p class="small" style="margin:0;">Good. Follow the designated reporting channel. Keep it factual and privacy-respecting.</p>`,
-                  "alert alert--info"
-                );
-              } else if (choice === "supervisor") {
-                show(
-                  "proHelpFeedback3",
-                  `<p class="small" style="margin:0;">If policy requires it, contacting a designated supervisor can be appropriate. Still ensure reporting obligations are met.</p>`,
-                  "alert alert--warning"
-                );
-              } else {
-                show(
-                  "proHelpFeedback3",
-                  `<p class="small" style="margin:0;">Documenting first can help clarity. Keep it brief and factual, then proceed to reporting.</p>`,
-                  "alert alert--info"
-                );
-              }
-            }
-
-            updateSummary();
-          });
-        });
-      })();
-    </script>
   </body>
 </html>
