@@ -2,8 +2,7 @@
 # Safeguard ◎  
 ### A Crisis-Forward Child Safety Platform
 
-🔗 **Live Site:** https://your-site-name.netlify.app  
-(Replace after deployment)
+🔗 **Live Site:** https://child-abuse-awareness.netlify.app/
 
 ---
 
